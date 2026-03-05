@@ -41,7 +41,7 @@ function getLevelTitle(level) {
     <!-- 主标题 -->
     <div class="page-header">
       <h1 class="page-title">
-        {{ locale === 'zh' ? '英文指法练习' : 'English Typing Practice' }}
+        {{ locale === 'zh' ? '指法练习' : 'Typing Practice' }}
       </h1>
       <p class="page-subtitle">
         {{ locale === 'zh' ? '从基准键位到熟练打字的完整学习路径' : 'Complete learning path from home row to touch typing' }}

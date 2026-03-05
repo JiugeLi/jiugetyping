@@ -1,4 +1,4 @@
-# 指法道场 / TouchType Dojo
+# JiugeTyping
 
 <div align="center">
   <h3>🎯 从零开始掌握标准指法的打字练习应用</h3>
@@ -68,6 +68,84 @@ npm run build
 
 # 预览生产构建
 npm run preview
+```
+
+## 🌐 部署到 Cloudflare Pages
+
+本项目完全支持 Cloudflare Pages 部署！
+
+### 部署步骤
+
+1. **推送代码到 GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin <your-repo-url>
+   git push -u origin main
+   ```
+
+2. **在 Cloudflare Pages 创建项目**
+   - 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - 进入 "Pages" 页面
+   - 点击 "Create a project"
+   - 选择 "Connect to Git"
+
+3. **配置构建设置**
+   - **Framework preset**: Vite
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Root directory**: (留空)
+
+4. **环境变量** (可选)
+   - 无需额外环境变量
+
+5. **点击 "Save and Deploy"**
+
+### 自动部署
+
+配置完成后，每次推送到主分支都会自动触发部署！
+
+### 自定义域名 (可选)
+
+- 在 Cloudflare Pages 项目设置中
+- 点击 "Custom domains"
+- 添加你的域名并按提示配置 DNS
+
+### 注意事项
+
+- ✅ 项目已包含 `_redirects` 文件，支持 Vue Router 的 history 模式
+- ✅ 纯静态站点，无需服务器
+- ✅ 使用 localStorage 存储用户进度
+- ✅ 支持 SPA 路由（/practice/1, /settings 等）
+
+### 其他部署平台
+
+项目也可部署到以下平台：
+
+**Vercel**
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 部署
+vercel
+```
+
+**Netlify**
+```bash
+# 安装 Netlify CLI
+npm i -g netlify-cli
+
+# 部署
+netlify deploy --prod
+```
+
+**GitHub Pages**
+```bash
+# 修改 vite.config.js 的 base 为仓库名
+# npm run build
+# 将 dist 目录推送到 gh-pages 分支
 ```
 
 ## 🎯 关卡设计
@@ -222,6 +300,6 @@ MIT License
 ---
 
 <div align="center">
-  <p>使用 ❤️ 和 Vue 3 构建</p>
-  <p>Made with ❤️ using Vue 3</p>
+  <p>使用 ❤️ 和 Vue 3 构建 | Made with ❤️ using Vue 3</p>
+  <p>© 2024 JiugeTyping</p>
 </div>

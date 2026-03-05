@@ -31,8 +31,7 @@ const currentLabels = computed(() => navLabels[locale.value] || navLabels.zh)
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-brand">
-        <span class="brand-cn">指法道场</span>
-        <span class="brand-en">TouchType Dojo</span>
+        <span class="brand-cn">JiugeTyping</span>
       </div>
 
       <div class="nav-links">
@@ -91,25 +90,26 @@ const currentLabels = computed(() => navLabels[locale.value] || navLabels.zh)
 
 .nav-brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   line-height: 1.2;
 }
 
 .brand-cn {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   color: #1e40af;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .dark .brand-cn {
-  color: #60a5fa;
-}
-
-.brand-en {
-  font-size: 11px;
-  color: #60a5fa;
-  letter-spacing: 1px;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav-links {
