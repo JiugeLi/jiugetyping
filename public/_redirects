@@ -1,4 +1,8 @@
 # Cloudflare Pages SPA 路由配置
 # 将所有路由重定向到 index.html，支持 Vue Router 的 history 模式
 
+# 静态资源直接访问
+/assets/* /assets/:splat 200
+
+# 其他所有路由重定向到 index.html
 /* /index.html 200
